@@ -3,19 +3,42 @@
 
 <head>
     <title>Just A Calendar - Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.0.0/out/water.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/codeassets/Index.css">
+
 </head>
 
 <body>
-    <div><label for="signuplink">Don't have an account yet?</label>
-        <a href="signup.html" id="signuplink"><u>Sign Up here!</u></a>
-        <br>
-        <label for="loginlink">Already a member?</label>
-        <a href="login.html" id="loginlink"><u>Log In!</u></a>
+    <div class="row">
+        <div class="col-12 upperbar">
+            <div class="col-4">
+                <button><a href="calendar.html" id="calendarlink">Calendar</a></button>
+            </div>
+
+            <div class="col-6">
+                <label for="signuplink">Don't have an account yet?</label>
+                <a href="signup.html" id="signuplink" target="_blank"><u>Sign Up here!</u></a>
+
+                <label for="loginlink">Already a member?</label>
+                <a href="login.html" id="loginlink" target="_blank"><u>Log In!</u></a>
+            </div>
+        </div>
+        <div class="col-6">
+            <p>Hello World!</p><br>
+            <p>Welcome to 'Just A Calendar'! A Calendar on the web, created and maintained
+                by <a href="https://www.instagram.com/gregoryuncle/" id="gregorylink" target="_blank"><u>Gregory
+                        Uncle</u></a>
+            </p>
+        </div>
+
+
     </div>
-    <div>
-        <button><a href="calendar.html" id="calendarlink">Calendar</a></button>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
