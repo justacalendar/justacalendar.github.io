@@ -1,3 +1,13 @@
 .upperbar{
     background-color: lightblue;
 }
+
+.row {
+    margin:0px;
+  }
+
+.container-fluid{
+  padding-left: 0rem;
+  padding-right: 0rem;
+  overflow: hidden;
+}
