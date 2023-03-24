@@ -16,12 +16,16 @@
         <div class="row">
             <div class="d-flex flex-row col-12 upperbar">
                 <div class="col-2 d-flex align-items-center">
-                    <button><a  href="calendar.html" id="calendarlink">Calendar</a></button>
+                    <button class="calbutt hideonmobile"><a class="calbuttlink" href="calendar.html"
+                            id="calendarlink"><img src="assets/imageassets/calicon.png"
+                                class="calicon">&nbsp;Calendar</a></button>
+                    <button class="showonmobile"><a class="calbuttlink" href="calendar.html" id="calendarlink"><img
+                                src="assets/imageassets/calicon.png" class="calicon"></a></button>
                 </div>
 
                 <div class="col-5 col-sm-4 col-md-3 d-flex align-items-center">
                     <img src="assets/imageassets/JAClogo.png" class="img-fluid">
-                </div >
+                </div>
 
                 <div class="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-5">
 
@@ -29,13 +33,20 @@
 
                 <div class="col-3 col-sm-4">
                     <div class="d-flex justify-content-start">
-                        <label for="signuplink">Don't have an account yet?</label>
+                        <label for="signuplink">
+                            <p class="hideonmobiletext">Don't have an account yet?</p>
+                        </label>
                     </div>
                     <div class="d-flex justify-content-start">
-                        <a href="signup.html" id="signuplink" target="_blank"><u>Sign Up here!</u></a>
+                        <a href="signup.html" id="signuplink" target="_blank"><u>
+                                <p class="hideonmobiletext">Sign Up here!</p>
+                                <p class="showonmobiletext">Sign Up!</p>
+                            </u></a>
                     </div>
                     <div class="d-flex justify-content-start">
-                        <label for="loginlink">Already a member?</label>
+                        <label for="loginlink">
+                            <p class="hideonmobiletext">Already a member?</p>
+                        </label>
                     </div>
                     <div class="d-flex justify-content-start">
                         <a href="login.html" id="loginlink" target="_blank"><u>Log In!</u></a>
@@ -54,6 +65,9 @@
 
 
     </div>
+    <footer>
+
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
