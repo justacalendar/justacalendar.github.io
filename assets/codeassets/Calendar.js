@@ -7,20 +7,22 @@ let monthnamecount = 0;
 let montharr = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
 let monthname = montharr[monthnamecount];
 
-let urlarr = ["url('assets/imageassets/monthp1.jpg')",
-    "url('assets/imageassets/monthp2.jpg')",
-    "url('assets/imageassets/monthp3.jpg')",
-    "url('assets/imageassets/monthp4.jpg')",
-    "url('assets/imageassets/monthp5.jpg')",
-    "url('assets/imageassets/monthp6.jpg')",
-    "url('assets/imageassets/monthp7.jpg')",
-    "url('assets/imageassets/monthp8.jpg')",
-    "url('assets/imageassets/monthp9.jpg')",
-    "url('assets/imageassets/monthp10.jpg')",
-    "url('assets/imageassets/monthp11.jpg')",
-    "url('assets/imageassets/monthp12.jpg')",
+let urlarr = ["url('assets/imageassets/season/monthp1.jpg')",
+    "url('assets/imageassets/season/monthp2.jpg')",
+    "url('assets/imageassets/season/monthp3.jpg')",
+    "url('assets/imageassets/season/monthp4.jpg')",
+    "url('assets/imageassets/season/monthp5.jpg')",
+    "url('assets/imageassets/season/monthp6.jpg')",
+    "url('assets/imageassets/season/monthp7.jpg')",
+    "url('assets/imageassets/season/monthp8.jpg')",
+    "url('assets/imageassets/season/monthp9.jpg')",
+    "url('assets/imageassets/season/monthp10.jpg')",
+    "url('assets/imageassets/season/monthp11.jpg')",
+    "url('assets/imageassets/season/monthp12.jpg')",
     "url('assets/imageassets/firstimg.jpg')"
 ];
+
+let today = new Date();
 
 
 
@@ -48,10 +50,10 @@ function unhideeverything() {
 }
 
 function Yearinput() {
-
     tablereset();
     tablevalreset();
     startingday = 0; year = 0; days = 0;
+    document.getElementById("YearInput").value = today.getFullYear();
     if (document.getElementById("YearInput").value != "") {
         year = Number(document.getElementById("YearInput").value);
         StartingDayFinder();
@@ -61,9 +63,15 @@ function Yearinput() {
         damprinter("startingmonthnochange");
         sidebuttonsendi("enable");
         hidesearch();
+        switchtocurrmon();
     }
     else {
         console.log("null : No year entered");
+    }
+}
+function switchtocurrmon(){
+    for(let i = 1;i<= today.getMonth();i++){
+        rightbutton();
     }
 }
 function tablevalreset() {
@@ -156,6 +164,15 @@ function damprinter(mode) {
 
             if (j == 0) {
                 cell[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
+            }
+            else if(r == today.getDate())
+            {
+                if((monthnamecount == today.getMonth())&&(year == today.getFullYear())){
+                cell[j].innerHTML = "<span style='background-color: #F17E65;'>" + r + "</span>";
+                }
+                else {
+                    cell[j].innerHTML = r;
+                }
             }
             else {
                 cell[j].innerHTML = r;
@@ -430,11 +447,13 @@ function sidebuttonsendi(mode) {
 }
 
 function loadimg() {
-
+//console.log(today.getFullYear());
     hideeverything();
     for (var imgloopcount = 0; imgloopcount < 13; imgloopcount++) {
         document.body.style.backgroundImage = urlarr[imgloopcount];
         imgloopcount++;
     }
     unhideeverything();
+   // document.getElementById("YearInput").value = today.getFullYear();
+   // Yearinput();
 }
