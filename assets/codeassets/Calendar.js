@@ -168,7 +168,7 @@ function damprinter(mode) {
             else if(r == today.getDate())
             {
                 if((monthnamecount == today.getMonth())&&(year == today.getFullYear())){
-                cell[j].innerHTML = "<span style='background-color: #F17E65;'>" + r + "</span>";
+                cell[j].innerHTML = `<span style='background-color: #74C1FD;'>${r}</span>`;
                 }
                 else {
                     cell[j].innerHTML = r;
