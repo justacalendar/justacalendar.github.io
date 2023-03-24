@@ -69,8 +69,8 @@ function Yearinput() {
         console.log("null : No year entered");
     }
 }
-function switchtocurrmon(){
-    for(let i = 1;i<= today.getMonth();i++){
+function switchtocurrmon() {
+    for (let i = 1; i <= today.getMonth(); i++) {
         rightbutton();
     }
 }
@@ -165,10 +165,9 @@ function damprinter(mode) {
             if (j == 0) {
                 cell[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
             }
-            else if(r == today.getDate())
-            {
-                if((monthnamecount == today.getMonth())&&(year == today.getFullYear())){
-                cell[j].innerHTML = `<span style='background-color: #74C1FD;'>${r}</span>`;
+            else if (r == today.getDate()) {
+                if ((monthnamecount == today.getMonth()) && (year == today.getFullYear())) {
+                    cell[j].innerHTML = "<span style='background-color: #74C1FD;'>" + r + "</span>";
                 }
                 else {
                     cell[j].innerHTML = r;
@@ -447,13 +446,13 @@ function sidebuttonsendi(mode) {
 }
 
 function loadimg() {
-//console.log(today.getFullYear());
+    //console.log(today.getFullYear());
     hideeverything();
     for (var imgloopcount = 0; imgloopcount < 13; imgloopcount++) {
         document.body.style.backgroundImage = urlarr[imgloopcount];
         imgloopcount++;
     }
     unhideeverything();
-   // document.getElementById("YearInput").value = today.getFullYear();
-   // Yearinput();
+    // document.getElementById("YearInput").value = today.getFullYear();
+    // Yearinput();
 }
