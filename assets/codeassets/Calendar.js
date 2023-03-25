@@ -168,8 +168,14 @@ function damprinter(mode) {
         for (j = fjs; j < 7; j++) {
 
             if (j == 0) {
+                if ((monthnamecount == today.getMonth()) && (year == today.getFullYear()) && (r == today.getDate())) {
+                    cell[j].innerHTML = "<span style='background-color: #74C1FD; color: red;'>" + r + "</span>";
+                    cellsm[j].innerHTML = "<span style='background-color: #74C1FD; color: red;'>" + r + "</span>";
+                }
+                else {
                 cell[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
                 cellsm[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
+                }
             }
             else if (r == today.getDate()) {
                 if ((monthnamecount == today.getMonth()) && (year == today.getFullYear())) {
