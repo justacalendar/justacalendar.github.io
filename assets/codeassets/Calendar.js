@@ -49,11 +49,13 @@ function unhideeverything() {
     document.getElementById("monthtable").style.visibility = "visible";
 }
 
-function Yearinput() {
+function Yearinput(IsToSearch) {
     tablereset();
     tablevalreset();
     startingday = 0; year = 0; days = 0;
-    document.getElementById("YearInput").value = today.getFullYear();
+    if (document.getElementById("YearInput").value == "") {
+        document.getElementById("YearInput").value = today.getFullYear();
+    }
     if (document.getElementById("YearInput").value != "") {
         year = Number(document.getElementById("YearInput").value);
         StartingDayFinder();
@@ -63,15 +65,17 @@ function Yearinput() {
         damprinter("startingmonthnochange");
         sidebuttonsendi("enable");
         hidesearch();
-        switchtocurrmon();
+        switchtocurrmon(IsToSearch);
     }
     else {
-        console.log("null : No year entered");
+        console.log("null : No year!");
     }
 }
-function switchtocurrmon() {
-    for (let i = 1; i <= today.getMonth(); i++) {
-        rightbutton();
+function switchtocurrmon(istosearch) {
+    if ((year == today.getFullYear())&&(istosearch == false)) {
+        for (let i = 1; i <= today.getMonth(); i++) {
+            rightbutton();
+        }
     }
 }
 function tablevalreset() {
@@ -147,7 +151,7 @@ function damprinter(mode) {
 
     tablereset();
 
-    let i = 0, j = 0, r = 1, cell;
+    let i = 0, j = 0, r = 1, cell,cellsm;
 
     monthsetting(mode);
     if (sidebrpressed == true) {
@@ -160,21 +164,26 @@ function damprinter(mode) {
 
     for (i = 1; i < 7; i++) {
         cell = document.getElementById("monthtable").rows[i].cells;
+        cellsm = document.getElementById("monthtablesm").rows[i].cells;
         for (j = fjs; j < 7; j++) {
 
             if (j == 0) {
                 cell[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
+                cellsm[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
             }
             else if (r == today.getDate()) {
                 if ((monthnamecount == today.getMonth()) && (year == today.getFullYear())) {
                     cell[j].innerHTML = "<span style='background-color: #74C1FD;'>" + r + "</span>";
+                    cellsm[j].innerHTML = "<span style='background-color: #74C1FD;'>" + r + "</span>";
                 }
                 else {
                     cell[j].innerHTML = r;
+                    cellsm[j].innerHTML = r;
                 }
             }
             else {
                 cell[j].innerHTML = r;
+                cellsm[j].innerHTML = r;
             }
 
             r++;
@@ -189,13 +198,15 @@ function damprinter(mode) {
 }
 
 function tablereset() {
-    let i = 0, j = 0, cell;
+    let i = 0, j = 0, cell,cellsm;
 
     for (i = 1; i < 7; i++) {
         cell = document.getElementById("monthtable").rows[i].cells;
+        cellsm = document.getElementById("monthtablesm").rows[i].cells;
         for (j = 0; j < 7; j++) {
 
             cell[j].innerHTML = null;
+            cellsm[j].innerHTML = null;
 
         }
 

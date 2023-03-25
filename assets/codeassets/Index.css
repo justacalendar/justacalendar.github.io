@@ -13,12 +13,12 @@
 }
 
 @media (max-width: 647px) {
-  .hideonmobile {
+  .hideonmobilecalbutt {
     display: none;
   }
 }
 @media (min-width: 648px) {
-  .showonmobile {
+  .showonmobilecalbutt {
     display: none;
   }
 }

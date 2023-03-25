@@ -97,8 +97,24 @@ td{
 
     font-size: 60px;
 }
+.tds{
+    width: 10px;
+    height: 53px;
+
+    font-size: 35px;
+}
+
+
 .monthtable{
-    
+    margin-top: 6%;
+    margin-bottom: 10%;
+    width: 69%;
+}
+.monthtablesm{
+    background: rgba(255, 254, 254, 0.4);
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
     margin-top: 6%;
     margin-bottom: 10%;
     width: 69%;
@@ -108,3 +124,41 @@ td{
     justify-content: center;
     flex-direction: row;
 }
+.monthtabledivsm{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (max-width: 890px) {
+    .hideonmobiletable {
+      display: none;
+    }
+  }
+  @media (min-width: 891px) {
+    .showonmobiletable {
+      display: none;
+    }
+  }
+  @media (max-width: 620px) {
+    .hideonmobileweekname {
+      display: none;
+    }
+  }
+  @media (min-width: 621px) {
+    .showonmobileweekname {
+      display: none;
+    }
+  }
+  @media (max-width: 450px) {
+    .tds {
+      font-size: 30px;
+      height: 40px;
+    }
+  }
+  @media (min-width: 451px) {
+    .tds {
+      font-size: 35px;
+      height: 53px;
+    }
+  }
