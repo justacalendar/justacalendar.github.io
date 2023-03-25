@@ -117,7 +117,7 @@ td{
     text-align: center;
     margin-top: 6%;
     margin-bottom: 10%;
-    width: 69%;
+    width: 80%;
 }
 .monthtablediv{
     display: flex;
@@ -152,13 +152,13 @@ td{
   }
   @media (max-width: 450px) {
     .tds {
-      font-size: 30px;
+      font-size: 35px;
       height: 40px;
     }
   }
   @media (min-width: 451px) {
     .tds {
-      font-size: 35px;
+      font-size: 55px;
       height: 53px;
     }
   }
