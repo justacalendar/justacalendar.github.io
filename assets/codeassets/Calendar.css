@@ -97,12 +97,7 @@ td{
 
     font-size: 60px;
 }
-.tds{
-    width: 10px;
-    height: 53px;
 
-    font-size: 35px;
-}
 
 
 .monthtable{
@@ -110,59 +105,106 @@ td{
     margin-bottom: 10%;
     width: 69%;
 }
-.monthtablesm{
-    background: rgba(255, 254, 254, 0.4);
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    margin-top: 6%;
-    margin-bottom: 10%;
-    width: 80%;
-}
 .monthtablediv{
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
-.monthtabledivsm{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
+
+
+
+
 
 @media (max-width: 890px) {
-    .hideonmobiletable {
+    .showonlargeweek {
       display: none;
     }
   }
   @media (min-width: 891px) {
-    .showonmobiletable {
+    .showonmediumweek {
       display: none;
     }
   }
-  @media (max-width: 620px) {
-    .hideonmobileweekname {
+@media (max-width: 590px) {
+    .showonmediumweek {
       display: none;
     }
   }
-  @media (min-width: 621px) {
-    .showonmobileweekname {
+  @media (min-width: 591px) {
+    .showonsmallweek {
       display: none;
     }
   }
-  @media (max-width: 450px) {
-    .tds {
-      font-size: 35px;
-      height: 40px;
+  
+  @media (max-width: 310px) {
+    td {
+      font-size: 30px;
+      height: 35px;
     }
   }
-  @media (min-width: 451px) {
-    .tds {
-      font-size: 55px;
-      height: 53px;
+  @media (min-width: 311px) {
+    td {
+      font-size: 31px;
+      height: 36px;
     }
   }
-
+  @media (min-width: 350px) {
+    td {
+      font-size: 36px;
+      height: 41px;
+    }
+  }
+  @media (min-width: 400px) {
+    td {
+      font-size: 41px;
+      height: 46px;
+    }
+  }
+  @media (min-width: 450px) {
+    td {
+      font-size: 46px;
+      height: 51px;
+    }
+  }
+  @media (min-width: 500px) {
+    td {
+      font-size: 51px;
+      height: 56px;
+    }
+  }
+  @media (min-width: 550px) {
+    td {
+      font-size: 56px;
+      height: 61px;
+    }
+  }
+  @media (min-width: 600px) {
+    td {
+      font-size: 61px;
+      height: 66px;
+    }
+  }
+  @media (min-width: 650px) {
+    td {
+      font-size: 64px;
+      height: 69px;
+    }
+  }
+  @media (min-width: 700px) {
+    td {
+      font-size: 67px;
+      height: 72px;
+    }
+  }
+  @media (min-width: 1000px) {
+    td {
+      font-size: 67px;
+      height: 72px;
+    }
+  }
+  
+  
+ 
 
   @media (max-width: 330px) {
     .MonthBox,.YearBox {
@@ -221,109 +263,109 @@ td{
 
   @media (max-width: 330px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 22px;
-      width: 16px;
+      height: 26px;
+      width: 20px;
     }
   }
   @media (max-width: 330px) {
     .leftarrimg,.rightarrimg {
-      height: 16px;
-      width: 16px;
+      height: 20px;
+      width: 20px;
     }
   }
   @media (min-width: 331px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 28px;
-      width: 22px;
+      height: 32px;
+      width: 26px;
     }
   }
   @media (min-width: 331px) {
     .leftarrimg,.rightarrimg {
-      height: 22px;
-      width: 22px;
+      height: 26px;
+      width: 26px;
     }
   }
   @media (min-width: 390px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 34px;
-      width: 28px;
+      height: 38px;
+      width: 32px;
     }
   }
   @media (min-width: 390px) {
     .leftarrimg,.rightarrimg {
-      height: 28px;
-      width: 28px;
+      height: 32px;
+      width: 32px;
     }
   }
   @media (min-width: 450px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 34px;
-      width: 28px;
+      height: 38px;
+      width: 32px;
     }
   }
   @media (min-width: 450px) {
     .leftarrimg,.rightarrimg {
-      height: 28px;
-      width: 28px;
+      height: 32px;
+      width: 32px;
     }
   }
   @media (min-width: 510px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 40px;
-      width: 34px;
+      height: 44px;
+      width: 38px;
     }
   }
   @media (min-width: 510px) {
     .leftarrimg,.rightarrimg {
-      height: 34px;
-      width: 34px;
+      height: 38px;
+      width: 38px;
     }
   }
   @media (min-width: 570px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 40px;
-      width: 34px;
+      height: 44px;
+      width: 38px;
     }
   }
   @media (min-width: 570px) {
     .leftarrimg,.rightarrimg {
-      height: 34px;
-      width: 34px;
+      height: 38px;
+      width: 38px;
     }
   }
   @media (min-width: 630px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 46px;
-      width: 40px;
+      height: 50px;
+      width: 44px;
     }
   }
   @media (min-width: 630px) {
     .leftarrimg,.rightarrimg {
-      height: 40px;
-      width: 40px;
+      height: 44px;
+      width: 44px;
     }
   }
   @media (min-width: 690px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 46px;
-      width: 40px;
+      height: 50px;
+      width: 44px;
     }
   }
   @media (min-width: 690px) {
     .leftarrimg,.rightarrimg {
-      height: 40px;
-      width: 40px;
+      height: 44px;
+      width: 44px;
     }
   }
   @media (min-width: 750px) {
     .leftmonthbutton,.rightmonthbutton {
-      height: 52px;
-      width: 46px;
+      height: 56px;
+      width: 50px;
     }
   }
   @media (min-width: 750px) {
     .leftarrimg,.rightarrimg {
-      height: 46px;
-      width: 46px;
+      height: 50px;
+      width: 50px;
     }
   }

@@ -24,7 +24,13 @@ let urlarr = ["url('assets/imageassets/season/monthp1.jpg')",
 
 let today = new Date();
 
-
+function justtestprint()
+{
+let i = 1;
+cell = document.getElementById("monthtable").rows[i].cells;
+let dupe = Number(cell[3].textContent);
+console.log(dupe);
+}
 
 function unhidesearch() {
     document.getElementById("yearinbutton").style.visibility = "visible";
@@ -151,7 +157,7 @@ function damprinter(mode) {
 
     tablereset();
 
-    let i = 0, j = 0, r = 1, cell,cellsm;
+    let i = 0, j = 0, r = 1, cell;
 
     monthsetting(mode);
     if (sidebrpressed == true) {
@@ -164,32 +170,26 @@ function damprinter(mode) {
 
     for (i = 1; i < 7; i++) {
         cell = document.getElementById("monthtable").rows[i].cells;
-        cellsm = document.getElementById("monthtablesm").rows[i].cells;
         for (j = fjs; j < 7; j++) {
 
             if (j == 0) {
                 if ((monthnamecount == today.getMonth()) && (year == today.getFullYear()) && (r == today.getDate())) {
                     cell[j].innerHTML = "<span style='background-color: #74C1FD; color: red;'>" + r + "</span>";
-                    cellsm[j].innerHTML = "<span style='background-color: #74C1FD; color: red;'>" + r + "</span>";
                 }
                 else {
                 cell[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
-                cellsm[j].innerHTML = "<span style='color: red;'>" + r + "</span>";
                 }
             }
             else if (r == today.getDate()) {
                 if ((monthnamecount == today.getMonth()) && (year == today.getFullYear())) {
                     cell[j].innerHTML = "<span style='background-color: #74C1FD;'>" + r + "</span>";
-                    cellsm[j].innerHTML = "<span style='background-color: #74C1FD;'>" + r + "</span>";
                 }
                 else {
                     cell[j].innerHTML = r;
-                    cellsm[j].innerHTML = r;
                 }
             }
             else {
                 cell[j].innerHTML = r;
-                cellsm[j].innerHTML = r;
             }
 
             r++;
@@ -204,15 +204,13 @@ function damprinter(mode) {
 }
 
 function tablereset() {
-    let i = 0, j = 0, cell,cellsm;
+    let i = 0, j = 0, cell;
 
     for (i = 1; i < 7; i++) {
         cell = document.getElementById("monthtable").rows[i].cells;
-        cellsm = document.getElementById("monthtablesm").rows[i].cells;
         for (j = 0; j < 7; j++) {
 
             cell[j].innerHTML = null;
-            cellsm[j].innerHTML = null;
 
         }
 
